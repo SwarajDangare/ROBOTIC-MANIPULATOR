@@ -36,7 +36,7 @@ void loop()
 
  accXangle = (atan2(AcY, AcZ) * RAD_TO_DEG);
  accYangle = (atan2(AcX, AcZ) * RAD_TO_DEG);
-acczangle = (atan2(AcX,AcY) * RAD_TO_DEG);/* my attempt to calculate yaw but not correct*/
+acczangle = (atan2(AcX,AcY) * RAD_TO_DEG); //my attempt to calculate yaw but not correct
  gyroXrate = GyX / 16.5;
  gyroYrate = GyY / 16.5;
  gyroZrate = GyZ/ 16.5;
