@@ -1,5 +1,5 @@
 #include<Wire.h>
-const int MPU=0x68;  // I2C address of the MPU-6050
+const int MPU=0x68;     // I2C address of the MPU-6050
 int16_t AcX,AcY,AcZ,Tmp,GyX,GyY,GyZ;
 double compAngleX,compAngleY,gzangle,compAnglez,timer;
 double accXangle ,accYangle,acczangle ,gyroXrate ,gyroYrate,gyroZrate;
