@@ -2,21 +2,20 @@
 const int MPU=0x68;  // I2C address of the MPU-6050
 int16_t AcX,AcY,AcZ,Tmp,GyX,GyY,GyZ;
 double compAngleX,compAngleY,gzangle,compAnglez,timer;
-  double accXangle ,accYangle,acczangle ,gyroXrate ,gyroYrate,gyroZrate;
-  double gyroXAngle, gyroYAngle, gyroZAngle;
-  // float rgyro,w;
-  int ap=0.955;
+double accXangle ,accYangle,acczangle ,gyroXrate ,gyroYrate,gyroZrate;
+double gyroXAngle, gyroYAngle, gyroZAngle;
+// float rgyro,w;
+int ap=0.955;
 
   void setup()
 {
-   Serial.begin(9600);
-/////////////////////// SENSOR READING//////////
+ Serial.begin(9600);
  Wire.begin();
-  Wire.beginTransmission(MPU);
-  Wire.write(0x6B);  // PWR_MGMT_1 register
-  Wire.write(0);     // set to zero (wakes up the MPU-6050)
-  Wire.endTransmission(true);
-  ///////////////////////////////////////
+ Wire.beginTransmission(MPU);
+ Wire.write(0x6B);  
+ Wire.write(0);     
+ Wire.endTransmission(true);
+
 }
 void loop()
 {
